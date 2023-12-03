@@ -1,7 +1,7 @@
-# PIA Mioelectricidad 
+# PIA Mioelectricidad :zap:
+---
 
-
-### Set-up de entorno virtual
+### Set-up de entorno virtual :wrench:
 #### Configuración del entorno de desarrollo
 
 1. **Instalar Pipenv**: Si no lo tienes instalado, instala Pipenv usando pip, el administrador de paquetes de Python. Abre la línea de comandos y ejecuta:
@@ -38,3 +38,19 @@
     ```
 
 Ahora estarás en el entorno virtual y podrás ejecutar el código del proyecto.
+
+
+### Resultados modelos de clasificación :bar_chart:
+
+---
+
+#### Modelo SVM 
+
+![curvas aprendizaje svm](learning_curves_svm.png)
+
+![svm confusion matrix](svm_cm.png)
+
+
+#### Modelo GBM 
+
+![gbm confusion matrix](gbm_cm.png)
