@@ -1,4 +1,14 @@
 # PIA Mioelectricidad :zap:
+
+**Integrantes:**
+| Nombre                            | Matrícula |
+| --------------------------------- | ------------------------ |
+| Pedro Alfonso Martínez Barró      | 1804918                  |
+| Luis Antonio Ramírez Garza         | 1991893                  |
+| Alan Patricio Solis Garza          | 1992253                  |
+
+
+
 ---
 
 ### Set-up de entorno virtual :wrench:
