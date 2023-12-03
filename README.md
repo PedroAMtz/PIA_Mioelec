@@ -123,3 +123,53 @@ Ahora estarás en el entorno virtual y podrás ejecutar el código del proyecto.
 | Accuracy  |           |        | 0.78     | 216     |
 | Macro Avg | 0.79      | 0.79   | 0.78     | 216     |
 | Weighted Avg | 0.80   | 0.78   | 0.78     | 216     |
+
+----
+
+#### Script de entrenamiento personalizado (train.py)
+
+##### Script de Entrenamiento de Modelos SVM y GBM
+
+Este script de Python utiliza argparse para entrenar modelos SVM y GBM con datos de entrada especificados por el usuario.
+
+##### Uso
+
+1. **Estructura de Carpeta**: El script crea una carpeta con un ID aleatorio para almacenar los modelos y los informes de clasificación. Dentro de esta carpeta, se crean dos subcarpetas: `models` y `evaluation`.
+
+2. **Argumentos de la Línea de Comandos**:
+
+    - `--model`: Especifica el modelo a entrenar (`svm` o `gbm`).
+    - `--data-file`: Ruta al archivo de datos CSV.
+
+    Ejemplo de uso:
+    ```bash
+    python train_models.py --model svm --data-file data.csv
+    ```
+
+3. **Entrenamiento del Modelo SVM**:
+
+    - Entrena un modelo de SVM con los parámetros predefinidos (`C=1`, `gamma=0.01`, `kernel='linear'`).
+    - Evalúa el modelo en el conjunto de prueba.
+    - Guarda el modelo SVM en la carpeta `models` y el informe de clasificación en la carpeta `evaluation`.
+
+4. **Entrenamiento del Modelo GBM**:
+
+    - Codifica las etiquetas usando `LabelEncoder`.
+    - Crea datasets de LightGBM.
+    - Entrena un modelo GBM con parámetros predefinidos.
+    - Evalúa el modelo en el conjunto de prueba.
+    - Guarda el modelo GBM en la carpeta `models` y el informe de clasificación en la carpeta `evaluation`.
+
+##### Ejemplo de Estructura de Carpeta Generada
+
+- `random_folder_id/`: Carpeta principal con un ID aleatorio que se genera automáticamente.
+
+  - `models/`: Subcarpeta que contiene los modelos entrenados.
+
+    - `svm_model.joblib`: Archivo que almacena el modelo SVM entrenado utilizando la biblioteca joblib.
+
+    - `gbm_model.txt`: Archivo que guarda el modelo GBM entrenado utilizando la biblioteca LightGBM.
+
+  - `evaluation/`: Subcarpeta que contiene informes de evaluación.
+
+    - `classification_report.txt`: Archivo de texto que contiene el informe de clasificación generado durante la evaluación de los modelos.
